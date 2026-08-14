@@ -1,0 +1,27 @@
+.header {
+  background-color: var(--bg-light);
+  padding: 15px 0;
+  box-shadow: var(--box-shadow);
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  position : relative
+}
+
+.logo img {
+ display: block;
+  width: 150px;
+  height: auto;
+
+}
+
+#btnalternate{
+  position: absolute;
+  right: 0;
+
+}
