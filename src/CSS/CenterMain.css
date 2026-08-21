@@ -1,4 +1,5 @@
-.MiddlePhase{
-
-	top: 50%;
+.MiddlePhase img{
+   height:1000px;
+   width: 100%;
+	object-fit:cover;
 }
