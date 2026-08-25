@@ -1,0 +1,149 @@
+/* idea 1 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    min-height: 200px;
+    width: 100%;
+
+    background-color: lightgrey;
+
+    display: grid;
+    grid-template-columns: 1fr auto auto 1fr;
+    align-items: center;
+
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+
+
+.title {
+    grid-column: 2;
+
+    margin: 0;
+    width: auto;
+
+    border: 2px solid red;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0;
+}
+
+
+
+
+
+.butto {
+    grid-column: 3;
+
+    display: flex;
+    align-items: center;
+
+    height: auto;
+    padding: 0;
+
+    border: 2px solid black;
+}
+
+
+.dropDownContainer {
+    grid-column: 4;
+
+    padding: 5px 10px;
+    border: 4px solid darkblue;
+
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+/* Idea 2 chat gpt */
+
+
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: 200px;
+
+    background-color: lightgrey;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+
+/* TITLE stays exactly in the center */
+.title {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 50%;
+
+    border: 2px solid red;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* PHONE/BUTTON */
+.butto {
+    position: absolute;
+
+    right: 200px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+
+    height: 40px;
+    padding: 0;
+
+}
+
+
+/* DROPDOWN */
+.dropDownContainer {
+    position: absolute;
+
+    right: 20px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    padding: 5px 10px;
+
+    border: 4px solid darkblue;
+}
