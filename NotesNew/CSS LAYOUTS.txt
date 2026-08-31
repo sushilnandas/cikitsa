@@ -1,0 +1,350 @@
+-----------------------------------------------------------------------------------------------------------------------  |
+																																												|
++------------------------------------------------------+																							|
+|                BOX-SIZING COMPARISON                 |					                                                                                |
++------------------------------------------------------+  																							|
+																																												|
+[ content-box ]                                              																											|
++-----------------------------+ 																																|
+|  Content Area               |    																																	|
+|  (width excludes border)    | 																																	|
++-----------------------------+   																																|
+| Border adds extra width     |   																																|
+| Total width = content + border + padding |   																										|
++-----------------------------+  																																|
+																																												|
+[ border-box ]  																																						|
++-----------------------------+  																																|
+|  Content Area               |     																																	|
+|  (width includes border)    |     																																|
+|  Border fits inside width   |      																																|
++-----------------------------+  																																|
+| Total width = declared width |   																															|
++-----------------------------+   																																|
+------------------------------------------------------------------------------------------------------------------------ |
+
+
+
+
+================================================================================
+
+-----------------------------------------
+|                                       |
+|                                       |
+|               Viewport                |
+|                                       |
+|                                       |
+|---------------------------------------|
+|                                       |
+|   top: 50% only                       |
+|   +----------------------+            |
+|   |      .title box      |            |
+|   |  (starts at middle)  |            |
+|   +----------------------+            |
+|   Notice: box sits BELOW center       |
+|                                       |
+|---------------------------------------|
+|                                       |
+|   top: 50% + left: 50% + transform    |
+|   +----------------------+            |
+|   |      .title box      |            |
+|   |   perfectly centered |            |
+|   +----------------------+            |
+|   Box’s CENTER aligns with viewport   |
+|                                       |
+-----------------------------------------
+
+
+
+
+=============================================================================================
+
+
+
+
+
+┌─────────────────────────────────────────────┐
+│                  MARGIN                     │ 						-------------------------------------> Space
+│  ┌───────────────────────────────────────┐  │
+│  │                BORDER                 │  │
+│  │  ┌─────────────────────────────────┐  │  │
+│  │  │             PADDING             │  │  │
+│  │  │  ┌───────────────────────────┐  │  │  │
+│  │  │  │          CONTENT          │  │  │  │
+│  │  │  │                           │  │  │  │
+│  │  │  └───────────────────────────┘  │  │  │
+│  │  └─────────────────────────────────┘  │  │
+│  └───────────────────────────────────────┘  │
+└─────────────────────────────────────────────┘
+
+----------------------------------------------------------------------------------------
+
++--------------------------------------------------+
+|                STATIC (default)                  |
+|  - Follows normal document flow                  |
+|  - top/left ignored                              |
++--------------------------------------------------+
+
++--------------------------------------------------+
+|                RELATIVE                          |
+|  - Stays in flow, but can be nudged              |
+|  - top/left shift element slightly               |
+|  - Parent stays same size                        |
++--------------------------------------------------+
+
++--------------------------------------------------+
+|                ABSOLUTE                          |
+|  - Removed from flow                             |
+|  - Anchored to nearest positioned ancestor       |
+|  - If no ancestor, anchors to <html>             |
++--------------------------------------------------+
+
++--------------------------------------------------+
+|                FIXED                             |
+|  - Removed from flow                             |
+|  - Anchored to viewport (browser window)         |
+|  - Stays in place when scrolling                 |
++--------------------------------------------------+
+
++--------------------------------------------------+
+|                STICKY                            |
+|  - Acts like relative until scroll threshold     |
+
+
+
+
+Static → default, no special positioning.
+
+Relative → nudges element but keeps flow.
+
+Absolute → anchors to parent if relative.
+
+Fixed → pins to viewport, ignores parent.
+
+Sticky → hybrid: relative until scroll, then fixed.
+----------------------------------------------------------------------------
+-----------------------------|
+Image-sizing and scaling   |
+-----------------------------|
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+.title {
+  display: flex;																				+
+  flex-direction: column; /* stack children vertically */				+
+  align-items: center;    /* center horizontally */							+
+  justify-content: center;/* center vertically */								+
+  gap: 10px;              /* spacing between items */						+
+}                                                                                                   +
+																									+
+.title h1 {																						+
+  flex: 0 0 auto;         /* keep natural size */									+
+  font-size: 2rem;        /* control text size */								+
+}																									+
+																									+
+.title img {																					+
+  width: 150px;           /* set image size */									+
+  height: auto;           /* keep aspect ratio */								+
+}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+.title {
+  display: grid;
+  grid-template-rows: auto auto; /* two rows */
+  justify-items: center;         /* center horizontally */
+  align-items: center;           /* center vertically */
+  gap: 10px;
+}
+
+.title h1 {
+  font-size: 2rem;
+}
+
+.title img {
+  width: 150px;
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Animation for text
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1]based on font size ))))))))))))))))))))))))))))))))))))))))))))==> Animation based on text size
+h1 {
+  font-size: 20px;
+  transition: font-size 0.5s ease;
+}
+h1:hover {
+  font-size: 40px;
+}
+
+
+2]Based on font weight ))))))))))))))))))))))))))))))))))))))))))))==> Animation based on text thickness
+h1 {
+  font-weight: 300;
+  transition: font-weight 0.5s ease;
+}
+h1:hover {
+  font-weight: 700;
+}
+
+3]Based on font weight ))))))))))))))))))))))))))))))))))))))))))))==> Animation based on letter-spacing
+h1 {
+  letter-spacing: 0px;
+  transition: letter-spacing 0.5s ease;
+}
+h1:hover {
+  letter-spacing: 5px;
+}
+
+4]Based on font weight ))))))))))))))))))))))))))))))))))))))))))))==> Animation based on text shadow
+h1 {
+  text-shadow: 0 0 0 transparent;
+  transition: text-shadow 0.5s ease;
+}
+h1:hover {
+  text-shadow: 2px 2px 10px gold;
+}
+
+
+5]Based on font weight ))))))))))))))))))))))))))))))))))))))))))))==> Animation based on colour
+h1 {
+  color: black;
+  transition: color 0.5s ease;
+}
+h1:hover {
+  color: crimson;
+}
+
+
+
+
+
+
+
+@keyframes pulseText {
+  0%   { font-size: 20px; color: darkblue; }
+  50%  { font-size: 30px; color: crimson; }
+  100% { font-size: 20px; color: darkblue; }
+}
+
+h1 {
+  animation: pulseText 2s infinite;
+}
+
+
+
+ Example animation property.
+example : animation: pulseText 2s ease-in-out 1s infinite alternate forwards;
+
+value 1 -> keyframe name
+value 2 -> duration
+value 3 -> timing function
+value 4 -> delay before starting
+value 5 -> repeats forever
+value 6 -> runs forward then backward
+value 7 -> keeps the final style after finishing
+
+
+Example Transition property
+example : transition:::transition: font-size 1s ease, color 0.5s linear;
+
+1)Property                     - color, fontsize, 
+2)duration
+3)timing-function           - ease, linerar, ease-in, ease-out, ease-in-out or cubic-beizer
+4)delay                           - ls 
+
+
+
+
+
+---------------------------------------------------------------
+img hovering
+
+
+img {
+  width: 200px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+img:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px gold);
+}
+
+-----------------------------------------------------------------------
+
+
+came up the partition issue, by changing the 
+CSS style at header , to 
+
+
+
+Bulged transforms for header - can be done by using CSS transforms, keyframes, and shadows.
+
+
+
+/*animation: bulge 2s  infinite ease-in-out;*/ ======> animations
+Scale() - Exapnd and contraction
+Box-shadow animation - adds depth , makes look like bulging.
+Keyframes - defines bulge cycle -. grow, peak, shrink, reset
+Transition easing -> animation feels natural organic.
+
+
+
+                           0.6
+1) RGBA -> (Red,Green,Blue,Alpha)
+
+
+2) Backdrop-filter : 
+Applies blur effect(behind the element).
+to make it work, needs a semi transparent background like rgba
+==================================================================================================================================================
+
+27/8/2026
+
+Blur effect can cause issue to the child component
+
+so use ::before
+
+
+
+
+
+Step 1 : 
+heading h1 tag was not working , due to ';'
+=> now resolved.
+
+
+i)inset - covers the exisiting parent component.
+ii)content -""  (import String value, before using a ::before selector)
+iii)z-index : -1(hides pesudo element completely),0(for the blur layer),1(for children)
+
+
+
+iv)flex-direction : column
+v)flex : 1
+vi)flex : 2
+viii).main-layout { flex-direction: column; }
+ix).left-panel { flex: 2; }
+x).right-panel { flex: 1; }
+xi)
+
+
+Step2 : clearing the blur issue, in the header cikitsa image
+
+[I]to create a pseudo element. You required content: "" . with background and stretch with inset:0;
+
+
+
+Stacking Order : 
+
+
+i) > *
+">" selector for the targeting children
+"*" selector for universal targeting
+
+
+
+[II]
+
+use separate div containter with className for easy use(not recommended) 

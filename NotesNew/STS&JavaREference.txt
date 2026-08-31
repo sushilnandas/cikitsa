@@ -1,0 +1,189 @@
+STS&JAVA fo
+
+
+For running  Java Apk, 								+
+						
+Step 1: Installed the JDK in programfiles.					+
+
+Step 2 : Add JDK to path
+i) Win + R, type sysdm.cpl							+
+ii) Advanced -> Environmental Variables						+
+iii) System Variables -> Path -> Edit-> new
+Add the JDK bin folder path							+
+C:\Program Files\Java\jdk-21\bin
+					
+
+
+while adding the Spring boot  starter security . it automatically secures all endpoints with HTTP Basic authentication.(unless we configure)
+
+Without providing Securityconfig class. default login itself gets locked.
+
+
+
+For while adding the Spring boot  starter security . it automatically secures all endpoints with HTTP Basic authentication.(unless we configure)
+
+Without providing Securityconfig class. default login itself gets locked.
+
+
+
+For
+ jjwt-api, jjwt-impl, and jjwt-jackson
+
+
+ 
+
+Keypoints
+i) Spring security doesn't works, until you configure  'SecurityConfig' class.
+
+ii)jjwt-api, jjwt-impl, and jjwt-jackson
+
+dependencies are alone not enough.
+Further required JwtTokenProvider or similar bean, for validating tokens.
+
+iii) for checking the authenticity from the DB. you require 'UserDetailsService(<-this class loads from JPA repo)
+
+
+
+Security Config process
+
+
+
+
+
+
+Aug 29 2026
+1)version -> says the document followed by XML
+encoding = 'UTF-8' files character not coding
+
+2)xmlns = '<<project xmlns="http://maven.apache.org/POM/4.0.0maven.pom- address>'
+" the  
+xmlns = "xmlns" name space.
+
+3)xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+xsi -> XML Schema Instance
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0 -> xml meant for 
+
+
+code error debugging      :-=
+--------------------------
+
+Dashboard response for graph points
+
+=>Dashboard response consists of  graph points lists.
+
+=>where there in graph point, is
+ a minor class inside the major class 'dashboard response'
+
+
+
+graph is rendered in a seperate page, so the graph statistics 
+relative fields are taken as a input in seperate class.
+
+
+understanding =>
+ DashboardResponse.GraphPoint graphpoints = new DashboardResponse.GraphPoint();
+
+
+outer nonstatic and innerstaic class can be accessed by means of object reference.
+
+but the object belonging to the outer class.
+
+
+Example :
+Outer non static class and inner static class. 
+Outer.inner obj = new outer.inner();
+
+now the inner access fields can be accessed.
+
+step 2:- 
+
+build method is meant for setter like use. (updating the field with new values).
+
+.Listof() -. returning immutable collection.
+
+
+
+Pom.xml issue come up
+----------------------------
+
+step1 : lombok -1.18.20 not support new jdk 17+           (- -> before and + -> after)
+concluded that there is no issue here.
+
+
+step2 :  <?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+cvc-elt.1.a:cannot find the declaration of element error is equivalent =>{firewall protection issue}
+eclipse cannot validate the parent<project>.
+
+
+solution 
+
+windows -> preferences -> validation & Resolution -> Allow 
+resolution of external entities(security risk)
+
+31/8/2026 importamnt
+Xmlns:xsi - declared the prefix xsi, tells XML it refers to XML schema
+
+xsi:schema - tells XML to find .xsd(schema), which is responsible for struct and valid elements
+
+first link -> maven pom xml namespace
+
+second link -> URL of maven pom schema
+
+
+
+I)copy old data from office laptop
+
+II)webpages zip
+
+
+
+Step0 P:-Pending debugging version issue for maven in office pc.
+
+step 1 : project tag showing error
+step 2 : clicked on that -> opened small tab -> force download clicked
+step 3 : error resolve.
+
+concluded that this issue is due to IDE configuration issue
+
+alternate ways
+
+
+Way 1:-
+#mvn -version
+#mvn validate
+
+Error : cvc-elt.1.a: Cannot find the declaration of element 'project'
+
+
+Way2:-
+step 0 : check network connectivity (Maven POM 4.0.0 XSD)
+Step 1:->update project(already know step)
+Step 2 : -> clean the project
+               Project->Clean...
+Step 3 : -> it is maven or not. if not, Configure -> Convert to Maven Project
+Step 4 :-> check STS maven installation -> windows-preference-maven-installation
+           (or)windows-preference-maven-user settings
+
+Step5 : -> JDK version analyze -> windows-preference-java-compiler
+
+Step 6:checking windows proxy settings ->>Window → Preferences → General → Network Connections
+============================================================
+Pom.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/
+maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+=============================================================================
+

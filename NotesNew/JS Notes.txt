@@ -1,0 +1,94 @@
+JS
+
+map(value,index,array)=>{}
+
+faqs[] is an array
+inside map method - args 1, args2 not needed initation
+
+drop down
+with questions and answers using map method
+ 
+faqs.map(faq, index)
+accordion item containter checks the index present or not. then concanetes the String with accordion-item 
+("active" or not)
+
+accordian header container having onClick()=> calls togggleFaq(index)// as to the mentioned index it points the question
+<h4>{faq.question}</h4>
+span -> if it is clicked shows "-" or else it is "+"
+
+checks the value is true or not(whether it is present or not) && opens the fq.answer
+
+
+
+for reference calling :---------------------------
+---------------------------------------
+
+Public folder → use /filename.png.
+-----------------------------------------------
+Src/assets folder → use import and then reference the variable.
+------------------------------------------------------------------------
+Never use ../../public/... — that won’t resolve correctly in React.
+-------------------------------------------------------------------------
+
+onClick={() => alert("Hello!")}
+
+
+
+
+
+
+With { } after =>, you need an explicit return
+
+
+{faqs.map((faq, index) => {
+  return (
+    <div>...</div>
+  );
+})}
+
+
+{faqs.map((faq, index) => (
+  <div>...</div>
+))}
+
+
+
+
+17/8/2026
+debugs
+full day wasted due to useState() not defined;
+
+
+
+18/8/2026
+
+started to use sublime 
+
+
+
+at instant (or) at your place (or)at your door step (or) on next move/ not req
+
+
+second line
+_____________________________
+
+Quality Services, Backed by good level of experience.
+
+
+
+third line
+_________________________
+
+For families, teams, and organizations of any size//
+
+.
+
+
+
+for external web redirect, use
+this attribute:-
+-----------------------------------------------
+
+i)window.location.href="https://cikitsaindia.com
+
+ii)UseNavigate, Link or react Router-DOM  is used for internal router.

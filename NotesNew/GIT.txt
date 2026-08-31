@@ -1,0 +1,94 @@
+C:\Program Files\Git\cmd
+C:\Program Files\Git\bin
+
+ssh-keygen -t ed25519 -C "your-github-email@example.com"
+
+
+
+1)to -environmental variable , extensions included with .bin and applied
+2) SSh key issue. so created new ssh key.
+note: run as administrator for #Set-Service -Name ssh-agent -StartupType Automatic & #Start-Service ssh-agent. (try this if it doesn't work in the terminal)
+step 1: #ssh-add $env:USERPROFILE\.ssh\id_ed25519
+step 2: #ssh-add -l
+step 3 :#ssh -T git@github.com(testing git hub)
+step 4 :  #type $env:USERPROFILE\.ssh\id_ed25519.pub - > for getting key
+
+
+
+PS C:\WINDOWS\system32> Set-Service -Name ssh-agent -StartupType Automatic 
+PS C:\WINDOWS\system32> ^C PS C:\WINDOWS\system32> Start-Service ssh-agent
+ PS C:\WINDOWS\system32> ssh-add $env:USERPROFILE\.ssh\id_ed25519 Identity added: C:\Users\SARVO\.ssh\id_ed25519 (your-github-email@example.com)
+ PS C:\WINDOWS\system32> ssh-add -l 256 SHA256:7Y4o4M2nO66oeTE4oBl1iIauXOxr5bMK7o1OcPDWl2I your-github-email@example.com (ED25519)
+ PS C:\WINDOWS\system32> ssh -T git@github.com git@github.com: Permission denied (publickey).
+ PS C:\WINDOWS\system32>
+
+
+
+i)concatenate with "git branch
+
+-r -> see remote branch
+-a -> 
+
+ii)git fetch --all - fetches all the details remotely.
+iii)Local branch:   A --- B --- C   (your commits)
+Remote branch:  A --- D --- E   (remote commits)
+
+Local branch:   A --- B --- C
+                 \           \
+                  D --- E ---- M   (merge commit)
+
+
+
+
+
+25/8/2026
+r local branch (HeartTreatment) is behind the remote branch on GitHub — meaning someone (or you from another machine) has already pushed commits there that you don’t have locally.
+r local branch (HeartTreatment) is behind the remote branch on GitHub — meaning someone (or you from another machine) has already pushed commits there that you don’t have locally.
+
+#git merge origin/HeartTreatment
+#git rebase origin/HeartTreatment
+#git push origin HeartTreatment
+
+2 branches are combined with two parents.
+so it will be sharing branches
+
+
+
+Behind the reason- your all data are safe.
+fetches the remote branch
+tries to merge in local branch
+
+
+
+
+
+
+
+31/8/2026
+Xmlns:xsi - declared the prefix xsi, tells XML it refers to XML schema
+
+xsi:schema - tells XML to find .xsd(schema), which is responsible for struct and valid elements
+
+first link -> maven pom xml namespace
+
+second link -> URL of maven pom schema
+
+
+
+I)copy old data from office laptop
+
+II)webpages zip
+
+
+
+Step0P:-Pending debugging version issue for maven in office pc.
+
+step 1 : project tag showing error
+step 2 : clicked on that -> opened small tab -> force download clicked
+step 3 : error resolve.
+----------------------------------------------------
+
+
+
+
+

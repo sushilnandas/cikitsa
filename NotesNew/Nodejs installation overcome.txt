@@ -1,0 +1,11 @@
+node js not installing due to dll blocked by smart app control.
+
+disabled smart app control app
+
+#Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned - used the command in powershell, to unblock the access from the power shell
+
+
+mention semantic and non sematic tags with small case
+because react-considers the component name with starting  letter as small case.
+
+Vite's Hot Module Replacement (HMR) normally detects the change and updates the browser automatically.

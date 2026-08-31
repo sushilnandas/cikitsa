@@ -1,0 +1,33 @@
+
+
+Correction1:- in hospitals, 
+
+
+
+3, 4, 5 pages are not working.
+
+
+
+In creating Partner account. 
+-----------------------------------
+1)Email validation - after '@' , we can mention the valid string 
+example : gmail, yahoo.in, or else preferred organz.in
+
+2) Phone number validation required.
+   & if there is no input number given for phone
+=> need to mention as "phone number is required" (change the String)
+
+3) Password validation can be better 
+included with special symbols and numbers(@,#,$*,&,0-9).
+
+
+
+
+Next:---
+Global Hospital Search
+
+Hospital names or Location names, without presence it is rendering the next pages.
+hence required message.
+
+
+

@@ -1,0 +1,437 @@
+13/08/2026
+
+HTML reference
+	
+<header> - Defines a header for a document or a section
+<nav> - Defines a set of navigation links
+<section> - Defines a section in a document
+<article> - Defines independent, self-contained content
+<aside> - Defines content aside from the content (like a sidebar)
+<footer> - Defines a footer for a document or a section
+<details> - Defines additional details that the user can open and close on demand
+<summary> - Defines a heading for the <details> element
+
+
+
+
+
+<img src="/images/logo.jpeg" alt="Oncare Cancer Center Logo" class="img-fluid" width="160" height="40">
+
+
+CSS
+
+
+position : absolute, fixed
+height   : it mentions the height of a container
+display : flex ( making to stay in a same line)
+display : block (makes the element in as a box)
+align-items : center , flex-end, etc
+text-align : 
+margin   : right-top   left-right
+
+text-align: center;   only centers inline block level elements       /* doesn't center the image */
+justify-content:; works on grid/flex /* doesn't work on normal block elements */
+margin: 0 auto;              /* this DOES center the image */
+
+14/08/2026
+
+---------------------------------------------------------------------
+Header with image and one button at left
+---------------------------------------------------------------------------
+.header {                                            //grand parent section
+  background-color: var(--bg-light);
+  padding: 15px 0;
+  box-shadow: var(--box-shadow);
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {                                  //parent
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  position : relative
+}
+
+.logo img {
+ display: block;
+  width: 150px;
+  height: auto;
+
+}
+
+#btnalternate{
+  position: absolute;
+  right: 0;
+
+}
+
+--------------------------------------------
+padding: 20px;          /* all 4 sides */
+padding: 20px 40px;     /* top/bottom | left/right */
+padding: 20px 40px 60px; /* top | left/right | bottom */
+padding: 20px 30px 40px 50px; /* top | right | bottom | left */
+
+┌─────────────────────────────────────────────┐
+│                  MARGIN                     │ 						-------------------------------------> Space
+│  ┌───────────────────────────────────────┐  │
+│  │                BORDER                 │  │
+│  │  ┌─────────────────────────────────┐  │  │
+│  │  │             PADDING             │  │  │
+│  │  │  ┌───────────────────────────┐  │  │  │
+│  │  │  │          CONTENT          │  │  │  │
+│  │  │  │                           │  │  │  │
+│  │  │  └───────────────────────────┘  │  │  │
+│  │  └─────────────────────────────────┘  │  │
+│  └───────────────────────────────────────┘  │
+└─────────────────────────────────────────────┘
+
+Content - the contents width
+Border  -  The line surrounding the padding/content. or visible outline.
+Padding -  the space between the content and border. or space inside the outline
+Margin - space outside the border   or  invisible cushion outside                 // dont have colour
+background-colour - fills the inside area.
+
+
+--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Examples:-
+
+CSS Flex
+
+.app-container {
+  display: flex;              /* activates flexbox */
+  flex-direction: row;        /* side by side */
+  justify-content: space-around; /* spacing between components */
+  align-items: center;        /* vertical alignment */
+  border: 2px solid black;
+  background-color: lightgray;
+}
+
+display flex → turns the parent into a flex container.
+
+flex-direction → row for horizontal, column for vertical stacking.
+
+justify-content → controls spacing along the main axis.
+
+align-items → controls alignment along the cross axis.
+
+
+
+
+ii).app-container {
+  display: grid;              /* activates grid */
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 20px;                  /* spacing between items */
+  border: 2px solid black;
+  background-color: lightgray;
+}
+
+
+display grid → turns the parent into a grid container.
+
+grid-template-columns → defines how many columns and their sizes.
+
+gap → spacing between rows/columns.
+
+--------------------------------------------------------------
+object-fit
+
+fill	Stretches the image to fill the box. Default
+contain	Shows the entire image, but may leave empty space
+cover	Fills the entire box, cropping part of the image if necessary
+none	Keeps the image at its original size
+scale-down	Uses whichever is smaller: none or contain
+ display: block;     /* ensures full-width */
+overflow: hidden// parent containers can be hidden
+
+
+
+
+importing issue after altering the css files.
+
+working in that.
+
+*got to know
+*project update issue.
+#npm install. done
+#ctrl c 
+# npm run dev
+*import './Doctors.css'; ->
+
+*now working in external folder.
+
+============================================================
+Example : 900px
+flex: 1; 200px
+flex: 2; 350px
+flex: 3; 350px
+
+ flex-grow: 1;(grows by ratio relative to the aside section )
+flex-shrink: 1;
+flex-basis: 0%;
+=========================================================================================
+
+.box {
+  display: none !important;
+}
+
+!important : refers to the give more importance to the code.
+
+@media (min-width: 576px) {
+  .d-sm-block {
+    display: block !important;
+  }
+
+  .d-sm-none {
+    display: none !important;
+  }
+}
+
+checks if the min width is 576px or above, then applies display settings as to that.
+
+!important 		-> more preference , not allows to override any
+
+z-index 		-> is to make visible of the required layer from the available layers.
+object-position		: center top;
+
+
+
+
+
+@media (min-width: 600px) {
+  .header {grid-area: 1 / span 6;}
+  .menu {grid-area: 2 / span 1;}
+  .content {grid-area: 2 / span 4;}
+  .facts {grid-area: 3 / span 6;}
+  .footer {grid-area: 4 / span 6;}
+}
+
+@media (min-width: 768px) {
+  .header {grid-area: 1 / span 6;}
+  .menu {grid-area: 2 / span 1;}
+  .content {grid-area: 2 / span 4;}
+  .facts {grid-area: 2 / span 1;}
+  .footer {grid-area: 3 / span 6;}
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+     
+
+
+
+========================================================================================================================================
+
+
+short HAND
+---------------------
+BORDER : WIDTH STYLE COLOR
+                 arg1     arg2    arg3
+ border-top: 2px solid black; // makes visible only for top
+ border-bottom : 2px solid black // makes visible only for bottom
+ 
+ *border-radius
+ ----------------
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 0;
+border-bottom-right-radius: 0;
+
+
+RULES
+i)CSS interprets it(space) as two separate classes: header and title.
+
+19/8/2026
+
+i)Scrollbar sits the right edge, so it disappears the right edge. 
+ii) Subpixel rounding
+iii)box-sizing : border-box;// to surround the section with border
+iv) width: calc(100% - 4px); /* accounts for 2px left + 2px right */
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------  |
+																																												|
++------------------------------------------------------+																							|
+|                BOX-SIZING COMPARISON                 |					                                                                                |
++------------------------------------------------------+  																							|
+																																												|
+[ content-box ]                                              																											|
++-----------------------------+ 																																|
+|  Content Area               |    																																	|
+|  (width excludes border)    | 																																	|
++-----------------------------+   																																|
+| Border adds extra width     |   																																|
+| Total width = content + border + padding |   																										|
++-----------------------------+  																																|
+																																												|
+[ border-box ]  																																						|
++-----------------------------+  																																|
+|  Content Area               |     																																	|
+|  (width includes border)    |     																																|
+|  Border fits inside width   |      																																|
++-----------------------------+  																																|
+| Total width = declared width |   																															|
++-----------------------------+   																																|
+------------------------------------------------------------------------------------------------------------------------ |
+Note:
+- content-box → border may overflow or clip at edges.
+- border-box → border stays inside the element’s declared width.
+
+
+harizontal centering
+ position: fixed;
+  top: 0;              /* stays at the top */
+  left: 50%;           /* anchor at middle of viewport */
+  transform: translateX(-50%); /* shift back by half its width */
+  width: 80%;          /* optional: shrink so it doesn’t span full width */
+}
+
+
+vertical centering 
+.header {
+  position: fixed;
+  top: 50%;            /* anchor at middle of viewport */
+  left: 50%;           /* anchor at middle horizontally */
+  transform: translate(-50%, -50%); /* shift back by half width & height */
+  width: 400px;        /* set a fixed width */
+  height: 100px;       /* set a fixed height */
+}
+
+
+-----------------------------------------
+|                                       |
+|                                       |
+|               Viewport                |
+|                                       |
+|                                       |
+|---------------------------------------|
+|                                       |
+|   top: 50% only                       |
+|   +----------------------+            |
+|   |      .title box      |            |
+|   |  (starts at middle)  |            |
+|   +----------------------+            |
+|   Notice: box sits BELOW center       |
+|                                       |
+|---------------------------------------|
+|                                       |
+|   top: 50% + left: 50% + transform    |
+|   +----------------------+            |
+|   |      .title box      |            |
+|   |   perfectly centered |            |
+|   +----------------------+            |
+|   Box’s CENTER aligns with viewport   |
+|                                       |
+-----------------------------------------
+
+transform: rotate(45deg);
+transform: scale(1.5);
+transform: skew(20deg, 20deg);
+transform : translate(-50%, -50%)
+                                       X        Y
+
+
+!+!+!+!++!+!+!+!+!+!++!+!+!+!+!+!+!+!+!+!+!++!+!+!+!+!+!+!+!+!+!++!+!+!+!+!+!+!++!+!+!+!+!+!+!+!+!++!+!+!+!+!+!+!+!++!+!+!+!+!+!+!++!+!+
+.OverallView {
+  position: relative; /* anchor children */
+}
+
+.header {
+  position: absolute; /* relative to OverallView */
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100px;
+  background-color: white;
+  border-top: 2px solid red;
+  border-bottom: 2px solid black;
+}
+
+.title {
+  position: absolute; /* now relative to OverallView */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  border: 2px solid red;
+  padding: 20px;
+}
+
+!+!+!++!+!+!+!+!++!+!+!+!+!++!+!+!+!+!+!++!+!+!+!+!+!+!++!+!+!+!+!+!+!+!++!+!+!+!+!+!++!+!+!+!+!+!+!+!+!+!+!++!+!+!++!+!+!++!+!++!+!++!
+
+properties: height, width, max-width,
+object-fit : cover, fill,contain, scale-down
+object-position : 
+font-size: 2rem
+
+
+Definition or technical term 
+------------------------------------------
+title → gap between heading and image.
+wrapper → gap between the title block and the button.
+
+===================================================================================
+align-item --->controls the cross axis.
+ justify-content-> controls the main axis.
+self alignment -> overrifes for a single item using align-self
+============================================================
+Any content height with the presence of parent div.
+-----------------------------------------------------------
+Button Height =Content Height+Padding Top+Padding Bottom+Border Top+Border Bottom
+
+=============================================================
+
+line-height: 1.5                  ------------------> makes text less cramped
+gap: 8px;                            ------------------> space between icon and text
+text-intend                       -------------------> Adds space before the tex
+====================================================================
+
+opening icon : Win +"."
+
+step 1:icon styles
+<i>
+
+step 2 :<svg class="icon" viewBox="0 0 24 24">
+    <path d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l1.8-1.8c.2-.2.6-.2.8 0l3.2 1.2c.2.2.4.4.4.8v3.2c0 .4-.2.8-.6.8C10.4 22 2 13.6 2 4.6c0-.4.4-.6.8-.6h3.2c.4 0 .6.2.8.4l1.2 3.2c.2.2.2.6 0 .8l-1.4 1.8z"/>
+  </svg>
+  
+  step 3 : unicode icons
+  
+  step 4 : icon fonts
+  ====================================================================================
+  
+  ========================================================================================================================================================
+
+25/8/2026
+
+For Default kind of emojis (unicodes especially) - font colour cannot be changed.
+
+Gradient colour 
+for greyish red
+
+
+i)color : it is mentioned for the font colours
+
+
+
+
+

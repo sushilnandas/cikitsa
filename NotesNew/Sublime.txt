@@ -1,0 +1,93 @@
+
+
+Sublime text
+
+1)Terminal is not inbuilt
+add using the below steps
+
+Tools-> Command Pallete->install package->
+Tools -> Command Pallete -> Terminus
+Tools -> Command Pallete ->
+
+
+Step 2:-
+
+i)closed sublime
+ii)win + E -> open win explorer
+iii)%APPDATA%\Sublime Text    -> pasted in path, find installed packages
+iv)deleted TerminusSublime.sublime-package
+v) re-installed the terminus package, terminal is working fine.
+
+
+
+Note that:-
+
+terminal -> for running command 
+prompt   -> for running requirements.
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+For running  Java Apk, 								+
+						
+Step 1: Installed the JDK in programfiles.					+
+
+Step 2 : Add JDK to path
+i) Win + R, type sysdm.cpl							+
+ii) Advanced -> Environmental Variables						+
+iii) System Variables -> Path -> Edit-> new
+Add the JDK bin folder path							+
+C:\Program Files\Java\jdk-21\bin
+										+ =======================
+
+Step3 ->After doing those steps pls restart cmd					+  Steps for adding java in the sublime 
+		
+Step 4 ->{									+==========================
+{										+
+  "shell_cmd": "javac $file && java $file_base_name"				+
+}
+}										+
+
+										+
+						
+Tools->Build-> others-> create Run Java .					+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Adding the react template
+------------------------------
+step 1 : Tools -> Preferene -> install package-> React templates
+step 2 : Accessing it 
+Need to debug.
+step 3 : followed Ai apllication.
+i) package control : Install Package
+
+*Babel/ReactJs Snippets                    - ES7+ React/Redux Snippets
+*Sublime Linter + Sublime-Linter Eslint    - ESLint
+*JsPrettier				   - Prettier
+*LSP + LSP-typescript			   - IntelliSense
+*Auto File Name/ Bracket highlight         - Auto Rename tag
+* Auto File Name                           -     Path Intellisense
+* Not native-limited alternative           - import cost
+* A File icon                             - material icon theme
+
+
+: use --host to expose                                                                                                                                                         
+node:internal/fs/watchers:323                                                                                                                                                              
+    const error = new UVException({                                                                                                                                                        
+                  ^                                                                                                                                                                        
+                                                                                                                                                                                           
+Error: EBUSY: resource busy or locked, watch 'C:\Users\SARVO\AppData\Local\Comms\UnistoreDB\store.jfm'                                                                                     
+    at FSWatcher.<computed> (node:internal/fs/watchers:323:19)                                                                                                                             
+    at Object.watch (node:fs:2609:36)                                                                                                                                                      
+    at createFsWatchInstance (file:///C:/Users/SARVO/node_modules/vite/dist/node/chunks/node.js:9408:16)                                                                                   
+    at setFsWatchListener (file:///C:/Users/SARVO/node_modules/vite/dist/node/chunks/node.js:9450:14)                                                                                      
+    at NodeFsHandler._watchWithNodeFs (file:///C:/Users/SARVO/node_modules/vite/dist/node/chunks/node.js:9565:20)                                                                          
+    at NodeFsHandler._handleFile (file:///C:/Users/SARVO/node_modules/vite/dist/node/chunks/node.js:9609:24)                                                                               
+    at NodeFsHandler._addToNodeFs (file:///C:/Users/SARVO/node_modules/vite/dist/node/chunks/node.js:9783:26)                                                                              
+Emitted 'error' event on FSWatcher instance at:                                                                                                                                            
+    at FSWatcher._handleError (file:///C:/Users/SARVO/node_modules/vite/dist/node/chunks/node.js:10582:146)                                                                                
+    at NodeFsHandler._addToNodeFs (file:///C:/Users/SARVO/node_modules/vite/dist/node/chunks/node.js:9788:18) {                                                                            
+  errno: -4082,                                                                                                                                                                            
+  syscall: 'watch',                                                                                                                                                                        
+  code: 'EBUSY',                                                                                                                                                                           
+  path: 'C:\\Users\\SARVO\\AppData\\Local\\Comms\\UnistoreDB\\store.jfm',      

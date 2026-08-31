@@ -1,0 +1,119 @@
+Accessbilty for each role
+
+User Role       UserName                PASSWORD	User Identity
+------------------------------------------------------------------------------
+Coordinator	coordinator		Coord@2026	Priya Nair
+
+Coordinator	coordinator2		Coord@2026	Suresh Menon
+
+Sales		sales			Sales@2026	Rohit Verma
+
+Calling Team	calling			Calling@2026	Neha Singh
+
+		marketing		Marketing@2026	Digital Marketing
+
+		developer		Developer@2026	Software Developer
+
+		hr			Hr@2026	HR	Employees, Attendance (team view), Leave Requests (approve/reject), Payroll
+
+		accounts		Accounts@2026	Accountant	Billing, commission, patient payments, payment history, and Payroll (money, shared with HR)
+
+		admin			Admin@2026	Super Admin
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+developer - Developer@2026
+
+
+=>can mention the eligible work hours for an employee
+
+=>instead of check in and chech out.
+can mention it as punch-in and punch-out.
+
+=> Can assign for request to meeting scheduled 
+by Team Lead.
+
+=> Can add Categories
+|-> Based on teams
+
+|->Based on Development(backend, frontend, Database)
+
+|-> Based on Deployment and testing.
+
+
+
+======================================================================
+Hr Role
+-----------
+
+
+|=> Addition of employee, showing server error.
+
+|=> Personal break, other break. Can be omitted?
+
+
+==================================================================================
+
+Account Role
+--------------
+Working fine,
+Found No Issues
+
+
+
+========================================================================
+Admin Role
+--------------
+Assigning task not considered with valid information.
+
+There could be listed task, to maintain 
+valid information.so it might avoid any inadequate information.
+
+Example:
+
+Task assigning to each roles
+
+i) Digital Marketing.
+
+A]Designing 
+
+B] Executing in live
+
+C] Purchase or ordering
+
+
+
+--------------------------------------------------
+ii]Development
+---------------------------------------------------------------------------------------------
+A] Completion for <mentioned> task
+
+mentioned task can have options
+
+i] Web page 
+ii] support for external project
+iii] Collaboration project(for large resource_
+iv] Deployment
+
+____________________________________________________________________________________________________________________________________________________
+
+Note: Remaining, all the roles are working fine, no issues in that.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

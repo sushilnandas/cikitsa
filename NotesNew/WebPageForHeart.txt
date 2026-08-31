@@ -1,0 +1,13 @@
+ 
+.header{
+position: fixed;       /* keeps it fixed in place */
+  top: 0;                /* sticks to the very top */
+  left: 0;               /* aligns to the left edge */
+  width: 100%;           /* spans full width */
+  background-color: lightblue;
+  border-bottom: 2px solid black;
+  padding: 10px;
+  z-index: 1000;   
+
+}
+

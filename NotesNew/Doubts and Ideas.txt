@@ -1,0 +1,151 @@
+
+************ To Disable Hyper-V ************
+
+bcdedit /set hypervisorlaunchtype off
+
+
+
+************ To Increase Display Resolution & Memory ************
+
+cd "C:\Program Files\Oracle\VirtualBox\"
+
+VBoxManage setextradata “macos” VBoxInternal2/EfiGraphicsResolution 1920x1080
+
+
+Choose a Resolution:
+  1280x720 | 1920x1080 | 2560x1440 | 2048x1080 | 3840x2160
+    HD         FHD          QHD         2K          4K
+
+
+
+************ To Patch Virtual Machine ************
+
+**** For AMD Processor ***
+
+cd "C:\Program Files\Oracle\VirtualBox\"
+
+VBoxManage.exe modifyvm "macos" --cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff
+
+VBoxManage setextradata "macos" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "iMac19,3"
+
+VBoxManage setextradata "macos" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0"
+
+VBoxManage setextradata "macos" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Iloveapple"
+
+VBoxManage setextradata "macos" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
+
+VBoxManage setextradata "macos" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 0
+
+VBoxManage modifyvm "macos" --cpu-profile "Intel Core i7-6700K"
+
+VBoxManage setextradata "macos" "VBoxInternal/TM/TSCMode" "RealTSCOffset"
+
+
+*** For Intel Processor ***
+
+cd "C:\Program Files\Oracle\VirtualBox\"
+
+VBoxManage.exe modifyvm "macos" --cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff
+
+VBoxManage setextradata "macos" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "iMac19,3"
+
+VBoxManage setextradata "macos" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0"
+
+VBoxManage setextradata "macos" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Iloveapple"
+
+VBoxManage setextradata "macos" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
+
+VBoxManage setextradata "macos" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 0
+
+VBoxManage setextradata "macos" "VBoxInternal/TM/TSCMode" "RealTSCOffset"
+
+
+
+
+
+div shell
+div frame
+div hero
+
+
+idea 1:
+1) move the animation icon and the input data 
+2)inbetween area include the required card data.
+3) as to that right side animation images, can be extended.
+reason: customer's gets attracted with our admits. so they can book soon.
+
+idea 2:
+
+1)below the free tool , we can place this cards.
+2) with a small pulse mitra toy, showing thumbs up.
+As same as the about.
+
+
+
+
+
+
+here what is the complexity in the sense, one parent component, has  2 child compoennt, 
+
+=>1 child component is header and 2nd child component name is centralmain;
+
+
+inside the one child  header component,
+there is one parent div and three child div;
+
+where 1 parent div is header , remaining three  div's are meant for title (consits of h1 and image). second div for the button, third div for the dropdown;
+
+
+now while after blur. in header , the title image is getting blur, how to resolve it ??;  
+
+
+
+
+
+
+
+
+
+
+
+Idea 1
+.OverallView .bg-img {
+  filter: blur(8px);
+}
+
+
+
+
+
+Idea 2
+.OverallView img {
+  filter: blur(8px);
+}
+
+.header .title img {
+  filter: none;   /* override blur */
+}
+
+
+
+
+idea 3
+
+.OverallView {
+  position: relative;
+}
+
+.OverallView::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('background.jpg') no-repeat center/cover;
+  filter: blur(8px);
+  z-index: 0;
+}
+
+.header, .centralmain {
+  position: relative;
+  z-index: 1; /* children stay sharp */
+}
+

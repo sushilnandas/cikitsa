@@ -1,0 +1,109 @@
+
+
+Sublime text
+
+1)Terminal is not inbuilt
+add using the below steps
+
+Tools-> Command Pallete->install package->
+Tools -> Command Pallete -> Terminus
+Tools -> Command Pallete ->
+
+
+Step 2:-
+
+i)closed sublime
+ii)win + E -> open win explorer
+iii)%APPDATA%\Sublime Text    -> pasted in path, find installed packages
+iv)deleted TerminusSublime.sublime-package
+v) re-installed the terminus package, terminal is working fine.
+
+
+
+Note that:-
+
+terminal -> for running command 
+prompt   -> for running requirements.
+
+
+Adding the react template
+------------------------------
+step 1 : Tools -> Preferene -> install package-> React templates
+step 2 : Accessing it 
+
+Five services, tailored to your needs
+Five services. One simple choice at a time.
+
+
+
+https://github.com/sushilnandas/cikitsa
+
+
+27/8/2026
+------------------------------------------------------------------------------
+
+#git ls-tree -r --name-only origin/HeartTreatment    -------------------list the commits 
+
+#git pull origin HeartTreatment                      -------------------pulls from the branch name <HeartTreatment>
+
+
+#git switch --track origin/HeartTreatment ------------------------------- before creating a normal branch(track these details)
+
+#git fetch origin HeartTreatment       ------------------------------------ mandatory for while fetching the branches  
+
+#git switch --detach origin/HeartTreatment -------------------------------->- detaches(connects to the preferred commit) one reference. 
+note : if two reference was created then delete it.
+
+#git show-ref | findstr HeartTreatment   - --------------------------------> checks for git ref
+)3
+
+#git branch -D origin/HeartTreatment   ----------------------------------------> Deletes the unwanted reference
+
+#git switch --detach refs/remotes/origin/HeartTreatment ------------------------> detaching the one reference()
+
+#git merge refs/remotes/origin/HeartTreatment --allow-unrelated-histories -------------------> >>>>above flag is for avoiding unrelated histories
+#git log --oneline -5 -------------------------------------------------------------------------> checks for git commits in current brancj
+git rev-parse <branch name> --------------------------------------------------------> check for pointing
+
+git log <origin/HeartTreatment> --oneline -5 --------------------------------------------------> checks explicitly for branches
+
+#git log origin/HeartTreatment..master --oneline
+
+=============================================================================================================================
+
+step 1:
+tried for pulling
+
+git fetch origin
+
+#git ls-tree -r --name-only origin/HeartTreatment -
+
+step 2 : git add . and git commit given twice.
+so reference was incorrect
+
+step 3: 
+
+
+refs/remotes/origin/HeartTreatment
+
+
+
+git created , refs/heads/origin/<branch-name> for local, and refs/remote/origin/<branch-name> 
+
+
+
+A..B> checks commit reachable from B that are not available in A
+
+
+
+
+
+GitHub HeartTreatment
+        ↓
+     04ce1b1
+        ↑
+origin/HeartTreatment
+        ↑
+      master
+
+Therefore, the two-reference ambiguity was a separate issue. It was caused by the extra local ref:
